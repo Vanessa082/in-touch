@@ -2,6 +2,13 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
+// import {Roboto_Mono} from '@next/font/google'
+// const roboto_mono = Roboto_Mono({
+//   subsets: ['latin'],
+//   weight: ['400', '700'],
+//   display: 'swap'
+// })
+
 const geistSans = localFont({
   src: "../core/fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -16,12 +23,13 @@ const geistMono = localFont({
 
 const appName = "InTouch";
 
-const appDescription = "Stay connected with friends and the latest trends with InTouch, the app for real-time chatting and social updates in one place.";
+const appDescription =
+  "Stay connected with friends and the latest trends with InTouch, the app for real-time chatting and social updates in one place.";
 
 export const metadata: Metadata = {
   title: {
     template: `%s | ${appName}`,
-    default: appName
+    default: appName,
   },
   description: appDescription,
   openGraph: {
@@ -40,7 +48,7 @@ export const metadata: Metadata = {
     title: {
       template: `%s | ${appName}`,
       default: appName,
-    }
+    },
   },
   appleWebApp: {
     capable: true,
@@ -55,7 +63,7 @@ export const metadata: Metadata = {
     {
       url: "https://github.com/vanessa082",
       name: "Wah Vanessa",
-    }
+    },
   ],
   keywords: [
     "InTouch",
@@ -67,8 +75,8 @@ export const metadata: Metadata = {
     "feed",
     "connected",
     "vanessa",
-    "rash edmund"
-  ]
+    "rash edmund",
+  ],
 };
 
 export default function RootLayout({
