@@ -3,8 +3,7 @@ import type { Config } from "tailwindcss";
 const config: Config = {
 	darkMode: ["class"],
 	content: [
-		"./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-		"./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+		"./src/core/**/*.{js,ts,jsx,tsx,mdx}",
 		"./src/app/**/*.{js,ts,jsx,tsx,mdx}",
 	],
 	theme: {
@@ -62,7 +61,7 @@ const config: Config = {
 
 					},
 					white: {
-						500: "#fffff",
+						500: "#ffffff",
 						400: "#f5f5f6"
 					},
 					text: {
@@ -74,9 +73,12 @@ const config: Config = {
 
 						},
 						white: {
-							500: "#fffff",
+							500: "#ffffff",
 							400: "#f5f5f6"
-						}
+						},
+						blue: {
+							500: "#2569fd",
+						},
 					}
 				},
 			},
@@ -84,6 +86,9 @@ const config: Config = {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			spacing: {
+				"app-w": "min(95vw, 1440px)",
 			}
 		},
 	},
