@@ -1,12 +1,25 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import "./globals.css";
 
-import {Roboto_Mono} from '@next/font/google'
-const roboto_mono = Roboto_Mono({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  display: 'swap'
-})
+// import {Roboto_Mono} from '@next/font/google'
+// const roboto_mono = Roboto_Mono({
+//   subsets: ['latin'],
+//   weight: ['400', '700'],
+//   display: 'swap'
+// })
+
+const geistSans = localFont({
+  src: "../core/fonts/GeistVF.woff",
+  variable: "--font-geist-sans",
+  weight: "100 900",
+});
+
+const geistMono = localFont({
+  src: "../core/fonts/GeistMonoVF.woff",
+  variable: "--font-geist-mono",
+  weight: "100 900",
+});
 
 const appName = "InTouch";
 
@@ -71,8 +84,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en"className={roboto_mono.className}>
-      <body >
+    <html lang="en">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         {children}
       </body>
     </html>

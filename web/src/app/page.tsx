@@ -1,11 +1,12 @@
 import { MainTag } from "@/components/atoms";
-import { Header } from "@/components/home-page";
+import { Header, HeroSection } from "@/components/home-page";
 
 export default function Home() {
   return (
-    <div className="w-full">
+    <div className="w-full pb-8">
       <MainTag>
         <Header />
+        <HeroSection />
       </MainTag>
     </div>
   );
