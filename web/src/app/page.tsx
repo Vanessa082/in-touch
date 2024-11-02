@@ -1,5 +1,5 @@
 import { MainTag } from "@/components/atoms";
-import { Header, HeroSection } from "@/components/home-page";
+import { Footer, Header, HeroSection } from "@/components/home-page";
 
 export default function Home() {
   return (
@@ -7,6 +7,7 @@ export default function Home() {
       <MainTag>
         <Header />
         <HeroSection />
+        <Footer />
       </MainTag>
     </div>
   );

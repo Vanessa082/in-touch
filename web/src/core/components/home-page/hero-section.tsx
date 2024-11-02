@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Textlogo } from "../atoms";
 import { Button } from "../ui/button";
 import Link from "next/link";
-import { Star } from "lucide-react";
+import { ArrowRight, Star } from "lucide-react";
 
 export default function Herosection() {
   return (
@@ -20,17 +20,17 @@ export default function Herosection() {
           &quote;Discover your community. Share your voice. Never miss a moment.&quote; With InTouch, you re always part of the conversation
         </p>
 
-        <Button className="w-fit">
-          <Link href="/feed">
-            Be InTouch Now
+        <Button className="w-fit flex">
+          <Link href="/feed" className="w-fit flex items-center gap-8">
+            Be InTouch Now <ArrowRight />
           </Link>
         </Button>
 
         <div className="flex justify-between items-center  w-full md:max-w-[35vw] ">
-          <Image src="./home/images.svg" alt="images" width={100} height={100}/>
+          <Image src="./home/images.svg" alt="images" width={70} height={100}/>
           <div className="flex flex-col">
               <span className="font-bold">2,291</span>
-              <span>Happy user</span>
+              <span className="text-app-dark-200">Happy user</span>
           </div>
           <Image
           src="/home/line.png"
@@ -48,7 +48,7 @@ export default function Herosection() {
                 <Star color="yellow-400" className="fill-yellow-400"/>
                 <Star />
               </div>
-              <span>Rating</span>
+              <span  className="text-app-dark-200">Rating</span>
           </div>
         </div>
       </div>
