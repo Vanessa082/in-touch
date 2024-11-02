@@ -1,10 +1,5 @@
-import React from 'react'
+import React from "react";
 
-export default function IdChatPage () {
-  return (
-    <div>
-      chat 
-    </div>
-  )
+export default function IdChatPage() {
+  return <div>chat</div>;
 }
-
