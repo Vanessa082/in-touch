@@ -1,4 +1,4 @@
-import { Facebook, Github, Instagram, Twitter, X } from "lucide-react";
+import { Facebook, Github, Instagram, X } from "lucide-react";
 import { Textlogo } from "../atoms";
 
 export default function Footer() {
