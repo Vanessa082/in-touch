@@ -1,27 +1,35 @@
 import Image from "next/image";
-import { Textlogo } from "../atoms";
+import { TextLogo } from "../atoms";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import { ArrowRight, Star } from "lucide-react";
+import { auth } from "@clerk/nextjs/server";
 
-export default function Herosection() {
+export default async function HeroSection() {
+  const { userId } = await auth();
+
+  const isAuthenTicated = !!userId;
+
   return (
     <section className="flex w-full flex-col-reverse items-center justify-between gap-4 md:flex-row">
       <div className="flex w-full flex-1 flex-col items-center justify-center gap-6 text-center md:items-start md:text-start">
         <div className="w-fit break-all text-5xl font-bold lg:text-6xl xl:text-7xl">
           <span className="flex gap-2 whitespace-nowrap">
-            Stay <Textlogo />,
+            Stay <TextLogo />,
           </span>
           Be Involved
         </div>
         <p className="max-w-[400px]">
           <q>Discover your community. Share your voice. Never miss a moment.</q>{" "}
-          With InTouch, you re always part of the conversation
+          With InTouch, you&apos;re always part of the conversation
         </p>
 
         <Button className="flex w-fit">
-          <Link href="/feed" className="flex w-fit items-center gap-4">
-            Be InTouch Now <ArrowRight />
+          <Link href={isAuthenTicated ? "/feed" : "/sign-in"} className="flex w-fit items-center gap-4">
+            {
+              isAuthenTicated ? "Welcome back" : "Be InTouch Now"
+            }
+            <ArrowRight />
           </Link>
         </Button>
 
@@ -35,7 +43,7 @@ export default function Herosection() {
             />
             <div className="flex flex-col">
               <span className="font-bold">000,2</span>
-              <span className="text-app-dark-200">Happy user</span>
+              <span className="text-app-dark-200">Happy users</span>
             </div>
           </div>
 

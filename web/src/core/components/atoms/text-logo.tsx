@@ -8,7 +8,7 @@ interface TextlogoProps extends ComponentProps<"span"> {
   sxText?: string;
 }
 
-export function Textlogo({
+export function TextLogo({
   className,
   sxImg,
   sxText,
