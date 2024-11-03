@@ -18,7 +18,7 @@ export default function Footer() {
           <Github />
         </div>
       </div>
-      <div className="flex w-full flex-col items-center justify-between gap-2 border-t border-solid pt-4 text-app-text-dark-200 md:flex-row">
+      <div className="flex w-full flex-col items-center justify-between gap-2 border-t border-solid pt-4 font-light md:flex-row">
         <span className="">&copy;Copyright all right reserved</span>
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
           <h4>Privacy Policy</h4>

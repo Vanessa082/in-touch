@@ -18,7 +18,7 @@ export function TextLogo({
   return (
     <span
       className={cn(
-        "flex w-fit items-center justify-center font-bold text-app-text-dark-500",
+        "flex w-fit items-center justify-center font-bold ",
         className
       )}
       {...restProps}

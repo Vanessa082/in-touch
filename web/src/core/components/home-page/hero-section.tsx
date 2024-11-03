@@ -25,10 +25,11 @@ export default async function HeroSection() {
         </p>
 
         <Button className="flex w-fit">
-          <Link href={isAuthenTicated ? "/feed" : "/sign-in"} className="flex w-fit items-center gap-4">
-            {
-              isAuthenTicated ? "Welcome back" : "Be InTouch Now"
-            }
+          <Link
+            href={isAuthenTicated ? "/feed" : "/sign-in"}
+            className="flex w-fit items-center gap-4"
+          >
+            {isAuthenTicated ? "Welcome back" : "Be InTouch Now"}
             <ArrowRight />
           </Link>
         </Button>

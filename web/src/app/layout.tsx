@@ -2,15 +2,16 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import {
   ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  ClerkLoaded,
-  ClerkLoading,
-  UserButton
+  // SignInButton,
+  // SignedIn,
+  // SignedOut,
+  // ClerkLoaded,
+  // ClerkLoading,
+  // UserButton,
 } from "@clerk/nextjs";
 
 import "./globals.css";
+import ThemeProvider from "@/components/themes/themes-provider";
 
 // import {Roboto_Mono} from '@next/font/google'
 // const roboto_mono = Roboto_Mono({
@@ -100,6 +101,14 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
           {/* <SignedOut>
             <SignInButton />
           </SignedOut>
@@ -114,7 +123,6 @@ export default function RootLayout({
           <ClerkLoaded>
             <div>Content Loaded</div>
           </ClerkLoaded> */}
-          {children}
         </body>
       </html>
     </ClerkProvider>

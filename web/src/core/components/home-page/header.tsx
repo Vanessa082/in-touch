@@ -2,6 +2,7 @@ import { TextLogo } from "@/components/atoms/";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import { SignedIn, SignedOut } from "@clerk/nextjs";
+import ModeToogle from "../ui/mode-toogle";
 
 export default function Header() {
   return (
@@ -33,6 +34,8 @@ export default function Header() {
             <Link href="/feed">Continue</Link>
           </Button>
         </SignedIn>
+
+        <ModeToogle />
       </div>
     </header>
   );

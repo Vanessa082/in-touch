@@ -6,5 +6,5 @@ export default function ProfilePage() {
     <MainTag>
       <UserButton />
     </MainTag>
-  )
+  );
 }

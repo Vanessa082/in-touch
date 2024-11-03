@@ -3,7 +3,7 @@ import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 /**
  * See clerk docs
  * @see https://clerk.com/docs/references/nextjs/custom-signup-signin-pages#make-the-sign-up-and-sign-in-routes-public
-*/
+ */
 const publicRoutes = ["/", "/sign-in(.*)", "/sign-up(.*)"];
 
 const isPublicRoute = createRouteMatcher(publicRoutes);
@@ -14,7 +14,7 @@ export default clerkMiddleware(
       await auth.protect();
     }
   },
-  { debug: process.env.NODE_ENV === "development" },
+  { debug: process.env.NODE_ENV === "development" }
 );
 
 export const config = {
