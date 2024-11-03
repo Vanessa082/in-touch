@@ -21,5 +21,14 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
+    "quotes": ["warn", "double", { "avoidEscape": true }],
+    "semi": ["warn", "always"],
+    "indent": ["warn", 2],
+    "class-methods-use-this": "warn",
+    "eol-last": ["warn", "always"],
+    "no-unused-vars": ["warn"],
+    "no-unused-expressions": ["warn"],
+    "no-multiple-empty-lines": ["error", { "max": 1 }],
+    "no-trailing-spaces": ["warn"]
   },
 };
