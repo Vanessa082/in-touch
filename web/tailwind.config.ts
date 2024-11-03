@@ -89,6 +89,9 @@ const config: Config = {
 			},
 			spacing: {
 				"app-w": "min(95vw, 1440px)",
+			},
+			screens: {
+				ssm: "450px",
 			}
 		},
 	},
