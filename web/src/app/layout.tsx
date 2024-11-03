@@ -100,7 +100,7 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
-          <SignedOut>
+          {/* <SignedOut>
             <SignInButton />
           </SignedOut>
           <SignedIn>
@@ -113,7 +113,7 @@ export default function RootLayout({
 
           <ClerkLoaded>
             <div>Content Loaded</div>
-          </ClerkLoaded>
+          </ClerkLoaded> */}
           {children}
         </body>
       </html>
