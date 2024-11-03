@@ -1,11 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { ArrowBigLeft } from "lucide-react";
-// import { headers } from "next/headers";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function NotFound() {
-  // const headerList = await headers();
   return (
     <div className="relative w-full h-screen flex items-center justify-center mx-auto bg-black select-none">
       <div className="z-10 w-app-w mx-auto flex flex-col items-center ssm:items-start justify-center gap-4 text-app-text-white-500">
