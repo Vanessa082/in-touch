@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="mt-8 flex flex-col items-center justify-between gap-8">
       <div className="flex w-full flex-col items-center justify-between gap-4 md:flex-row md:gap-12">
-        <Textlogo className="text-2xl" sxImg="size-[60px] sm:size-[50px]" />
+        <TextLogo className="text-2xl" sxImg="size-[60px] sm:size-[50px]" />
         <nav className="flex justify-between gap-12">
           <a href="">Demo</a>
           <a href="">About</a>

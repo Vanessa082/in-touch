@@ -1,12 +1,13 @@
-import { Textlogo } from "@/components/atoms/";
+import { TextLogo } from "@/components/atoms/";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import { SignedIn, SignedOut } from "@clerk/nextjs";
 
 export default function Header() {
   return (
     <header className="mx-auto flex w-app-w items-center justify-between py-8">
       <h1 className="w-fit">
-        <Textlogo
+        <TextLogo
           includeLogo
           className="text-2xl"
           sxText="hidden sm:flex"
@@ -21,12 +22,17 @@ export default function Header() {
       </nav>
 
       <div className="flex w-fit items-center justify-center gap-2">
-        <Button variant="ghost">
-          <Link href="">Login</Link>
-        </Button>
-        <Button asChild>
-          <Link href="/">Get Started</Link>
-        </Button>
+        <SignedOut>
+          <Button variant="ghost">
+            <Link href="/sign-in">Sign In</Link>
+          </Button>
+        </SignedOut>
+
+        <SignedIn>
+          <Button asChild>
+            <Link href="/feed">Continue</Link>
+          </Button>
+        </SignedIn>
       </div>
     </header>
   );
