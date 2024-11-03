@@ -11,7 +11,7 @@ export default async function FeedPage() {
   
   return (
     <div className="">
-      Landing Page
+      Feed Page
 
       <pre>
         {JSON.stringify({
