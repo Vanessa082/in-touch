@@ -19,7 +19,7 @@
       }
     ],
     "paths": {
-      "@/pages/*": ["./src/core/pages/*"],
+      "@/features/*": ["./src/core/features/*"],
       "@/lib/*": ["./src/core/lib/*"],
       "@/components/*": ["./src/core/components/*"],
       "@/core/*": ["./src/core/*"],

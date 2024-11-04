@@ -1,8 +1,11 @@
+"use client";
+
 import { cn } from "@/lib/utils";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import { ComponentProps } from "react";
 
-interface TextlogoProps extends ComponentProps<"span"> {
+interface TextLogoProps extends ComponentProps<"span"> {
   includeLogo?: boolean;
   sxImg?: string;
   sxText?: string;
@@ -14,7 +17,9 @@ export function TextLogo({
   sxText,
   includeLogo = false,
   ...restProps
-}: TextlogoProps) {
+}: TextLogoProps) {
+  const { theme } = useTheme();
+
   return (
     <span
       className={cn(
@@ -30,7 +35,7 @@ export function TextLogo({
 
       {includeLogo ? (
         <Image
-          src="/logo-light.svg"
+          src={theme === "light" ? "/logo-dark.svg" : "/logo-light.svg"}
           alt="InTouch Logo"
           height={100}
           width={100}

@@ -2,7 +2,7 @@ import { TextLogo } from "@/components/atoms/";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import { SignedIn, SignedOut } from "@clerk/nextjs";
-import ModeToggle from "../ui/mode-toggle";
+import { ThemeToggle } from "../ui/theme-toggle";
 
 export default function Header() {
   return (
@@ -35,7 +35,7 @@ export default function Header() {
           </Button>
         </SignedIn>
 
-        <ModeToggle />
+        <ThemeToggle />
       </div>
     </header>
   );

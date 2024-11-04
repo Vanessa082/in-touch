@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image";
-import { TextLogo } from "../atoms";
+import { TextLogo } from "../../atoms";
 import { useTheme } from "next-themes"
 
 export default function Loading() {
