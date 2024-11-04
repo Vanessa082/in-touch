@@ -7,7 +7,7 @@ export default function WithSideNavLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <SidebarProvider className="w-full flex items-center gap-2">
+    <SidebarProvider className="flex w-full items-center gap-2">
       <SideBar />
 
       <div className="w-full">
