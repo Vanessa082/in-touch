@@ -16,22 +16,23 @@ export function ThemeToggle({ includeText }: { includeText?: boolean }) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button
-          variant="ghost"
-          className="border-none text-app-text-dark-500 outline-none hover:bg-transparent"
-        >
-          {theme === "dark" ? (
-            <MoonIcon className="h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-          ) : (
-            <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          )}
+        <Button variant="ghost" className="border-none outline-none hover:bg-transparent text-app-text-dark-500">
+          {
+            theme === "dark" ? (
+              <MoonIcon className="h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+            ): (
+              <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+            )
+          }
 
-          {includeText ? "Toggle theme" : null}
+          {
+            includeText ? "Toggle theme" : null
+          }
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent className="bg-app-white-500 text-app-text-dark-500">
+      <DropdownMenuContent className="text-app-text-dark-500 bg-app-white-500">
         <DropdownMenuItem onClick={() => setTheme("light")}>
           Light
         </DropdownMenuItem>

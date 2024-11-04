@@ -107,7 +107,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            {/* <SignedOut>
+          {/* <SignedOut>
             <SignInButton />
           </SignedOut>
           <SignedIn>

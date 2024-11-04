@@ -12,7 +12,7 @@ export default async function HeroSection() {
 
   return (
     <section className="flex w-full flex-col-reverse items-center justify-between gap-4 md:flex-row">
-      <div className="flex w-full flex-1 flex-col items-center justify-center gap-6 text-center md:items-start md:text-start">
+      <div className="flex w-full flex-1 flex-col items-center justify-center gap-6 md:items-start text-center md:text-start">
         <div className="w-fit break-all text-5xl font-bold lg:text-6xl xl:text-7xl">
           <span className="flex gap-2 whitespace-nowrap">
             Stay <TextLogo />,
@@ -27,7 +27,7 @@ export default async function HeroSection() {
         <Button className="flex w-fit">
           <Link
             href={isAuthenTicated ? "/feed" : "/sign-in"}
-            className="flex w-fit items-center gap-4 font-semibold text-app-strict-text-white-500"
+            className="flex w-fit items-center gap-4 text-app-strict-text-white-500 font-semibold"
           >
             {isAuthenTicated ? "Welcome back" : "Be InTouch Now"}
             <ArrowRight />
