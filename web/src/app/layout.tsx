@@ -107,8 +107,6 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            {children}
-          </ThemeProvider>
           {/* <SignedOut>
             <SignInButton />
           </SignedOut>
@@ -123,6 +121,8 @@ export default function RootLayout({
           <ClerkLoaded>
             <div>Content Loaded</div>
           </ClerkLoaded> */}
+            {children}
+          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>
