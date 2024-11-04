@@ -18,13 +18,13 @@ export function TextLogo({
   return (
     <span
       className={cn(
-        "flex w-fit items-center justify-center font-bold ",
+        "flex w-fit items-center justify-center font-bold text-app-text-dark-500",
         className
       )}
       {...restProps}
     >
       <span className={cn("flex items-start justify-center", sxText)}>
-        <span className="text-app-text-blue-500">In</span>
+        <span className="text-app-strict-text-blue-500">In</span>
         <span>Touch</span>
       </span>
 

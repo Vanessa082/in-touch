@@ -10,7 +10,7 @@ import {
 } from "./dropdown-menu";
 import { useTheme } from "next-themes";
 
-export default function ModeToogle() {
+export default function ModeToggle() {
   const { setTheme } = useTheme();
   return (
     <DropdownMenu>

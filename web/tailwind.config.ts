@@ -50,35 +50,46 @@ const config: Config = {
 					'5': 'hsl(var(--chart-5))'
 				},
 				app: {
-					blue: {
-						500: "#2569fd",
-					},
-					dark: {
-						500: "#1e1c26",
-						400: "#252331",
-						300: "#343145",
-						200: "#666983"
+					"blue-500": "var(--app-blue-500)",
 
-					},
-					white: {
-						500: "#ffffff",
-						400: "#f5f5f6"
-					},
-					text: {
-						dark: {
-							500: "#1e1c26",
-							400: "#252331",
-							300: "#343145",
-							200: "#666983"
+					"dark-500": "var(--app-dark-500)",
+					"dark-400": "var(--app-dark-400)",
+					"dark-300": "var(--app-dark-300)",
+					"dark-200": "var(--app-dark-200)",
 
-						},
-						white: {
-							500: "#ffffff",
-							400: "#f5f5f6"
-						},
-						blue: {
-							500: "#2569fd",
-						},
+					"white-500": "var(--app-white-500)",
+					"white-400": "var(--app-white-400)",
+
+					"text-dark-500": "var(--app-text-dark-500)",
+					"text-dark-400": "var(--app-text-dark-400)",
+					"text-dark-300": "var(--app-text-dark-300)",
+					"text-dark-200": "var(--app-text-dark-200)",
+
+					"text-white-500": "var(--app-text-white-500)",
+					"text-white-400": "var(--app-text-white-400)",
+
+					"text-blue-500": "var(--app-text-blue-500)",
+
+					strict: {
+						"blue-500": "var(--strict-blue-500)",
+
+						"dark-500": "var(--strict-dark-500)",
+						"dark-400": "var(--strict-dark-400)",
+						"dark-300": "var(--strict-dark-300)",
+						"dark-200": "var(--strict-dark-200)",
+
+						"white-500": "var(--strict-white-500)",
+						"white-400": "var(--strict-white-400)",
+
+						"text-dark-500": "var(--strict-text-dark-500)",
+						"text-dark-400": "var(--strict-text-dark-400)",
+						"text-dark-300": "var(--strict-text-dark-300)",
+						"text-dark-200": "var(--strict-text-dark-200)",
+
+						"text-white-500": "var(--strict-text-white-500)",
+						"text-white-400": "var(--strict-text-white-400)",
+
+						"text-blue-500": "var(--strict-text-blue-500)",
 					}
 				},
 			},

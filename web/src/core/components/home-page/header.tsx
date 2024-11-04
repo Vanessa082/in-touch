@@ -2,7 +2,7 @@ import { TextLogo } from "@/components/atoms/";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import { SignedIn, SignedOut } from "@clerk/nextjs";
-import ModeToogle from "../ui/mode-toogle";
+import ModeToggle from "../ui/mode-toggle";
 
 export default function Header() {
   return (
@@ -24,18 +24,18 @@ export default function Header() {
 
       <div className="flex w-fit items-center justify-center gap-2">
         <SignedOut>
-          <Button variant="ghost">
+          <Button variant="ghost" className="font-semibold">
             <Link href="/sign-in">Sign In</Link>
           </Button>
         </SignedOut>
 
         <SignedIn>
-          <Button asChild>
+          <Button asChild className="font-semibold text-app-strict-text-white-500">
             <Link href="/feed">Continue</Link>
           </Button>
         </SignedIn>
 
-        <ModeToogle />
+        <ModeToggle />
       </div>
     </header>
   );

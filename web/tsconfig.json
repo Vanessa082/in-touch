@@ -19,6 +19,7 @@
       }
     ],
     "paths": {
+      "@/pages/*": ["./src/core/pages/*"],
       "@/lib/*": ["./src/core/lib/*"],
       "@/components/*": ["./src/core/components/*"],
       "@/core/*": ["./src/core/*"],
