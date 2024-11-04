@@ -10,6 +10,33 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+:root {
+  /* DEFAULT STRICT COLORS TAILWIND EXTENSIONS */
+  --strict-blue-500: #2569fd;
+
+  --strict-dark-500: #1e1c26;
+  --strict-dark-400: #252331;
+  --strict-dark-300: #343145;
+  --strict-dark-200: #666983;
+
+  --strict-white-500: #ffffff;
+  --strict-white-400: #f5f5f6;
+  --strict-white-300: #eaeaec;
+  --strict-white-200: #d8d8db;
+
+  --strict-text-dark-500: #1e1c26;
+  --strict-text-dark-400: #252331;
+  --strict-text-dark-300: #343145;
+  --strict-text-dark-200: #666983;
+
+  --strict-text-white-500: #ffffff;
+  --strict-text-white-400: #f5f5f6;
+  --strict-text-white-300: #eaeaec;
+  --strict-text-white-200: #d8d8db;
+
+  --strict-text-blue-500: #2569fd;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -37,6 +64,51 @@ body {
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* LIGHT MODE TAILWIND EXTENSIONS */
+    --app-blue-500: var(--strict-blue-500);
+
+    --app-dark-500: var(--strict-dark-500);
+    --app-dark-400: var(--strict-dark-400);
+    --app-dark-300: var(--strict-dark-300);
+    --app-dark-200: var(--strict-dark-200);
+
+    --app-white-500: var(--strict-white-500);
+    --app-white-400: var(--strict-white-400);
+
+    --app-text-dark-500: var(--strict-text-dark-500);
+    --app-text-dark-400: var(--strict-text-dark-400);
+    --app-text-dark-300: var(--strict-text-dark-300);
+    --app-text-dark-200: var(--strict-text-dark-200);
+
+    --app-text-white-500: var(--strict-text-white-500);
+    --app-text-white-400: var(--strict-text-white-400);
+
+    --app-text-blue-500: var(--strict-text-blue-500);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
@@ -64,6 +136,51 @@ body {
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* DARK MODE TAILWIND EXTENSIONS */
+    --app-blue-500: #2569fd;
+
+    --app-dark-500: var(--strict-white-500);
+    --app-dark-400: var(--strict-white-400);
+    --app-dark-300: var(--strict-white-300);
+    --app-dark-200: var(--strict-white-200);
+
+    --app-white-500: var(--strict-dark-500);
+    --app-white-400: var(--strict-dark-400);
+
+    --app-text-dark-500: var(--strict-text-white-500);
+    --app-text-dark-400: var(--strict-text-white-400);
+    --app-text-dark-300: var(--strict-text-white-300);
+    --app-text-dark-200: var(--strict-text-white-200);
+
+    --app-text-white-500: var(--strict-text-dark-500);
+    --app-text-white-400: var(--strict-text-dark-400);
+
+    --app-text-blue-500: #2569fd;
+
+    --sidebar-background: 240 5.9% 10%;
+
+    --sidebar-foreground: 240 4.8% 95.9%;
+
+    --sidebar-primary: 224.3 76.3% 48%;
+
+    --sidebar-primary-foreground: 0 0% 100%;
+
+    --sidebar-accent: 240 3.7% 15.9%;
+
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+
+    --sidebar-border: 240 3.7% 15.9%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -71,6 +188,7 @@ body {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
