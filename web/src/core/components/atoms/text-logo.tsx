@@ -35,7 +35,7 @@ export function TextLogo({
 
       {includeLogo ? (
         <Image
-          src={theme === "light" ? "/logo-dark.svg" : "/logo-light.svg"}
+          src={theme === "light" ? "/logo-light.svg" : "/logo-dark.svg"}
           alt="InTouch Logo"
           height={100}
           width={100}

@@ -5,17 +5,25 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <div className="relative w-full h-screen flex items-center justify-center mx-auto bg-black select-none">
-      <div className="z-10 w-app-w mx-auto flex flex-col items-center ssm:items-start justify-center gap-4 text-app-text-white-500">
-        <div className="w-fit flex flex-col items-start justify-center">
+    <div className="relative mx-auto flex h-screen w-full select-none items-center justify-center bg-black">
+      <div className="z-10 mx-auto flex w-app-w flex-col items-center justify-center gap-4 text-app-strict-text-white-500 ssm:items-start">
+        <div className="flex w-fit flex-col items-start justify-center">
           <h1 className="text-9xl font-bold">404</h1>
-          <h4 className="font-bold text-3xl">Did you  <span className="text-app-blue-500">loose</span> Touch?</h4>
+          <h4 className="text-3xl font-bold">
+            Did you <span className="text-app-blue-500">loose</span> Touch?
+          </h4>
         </div>
         <div className="flex items-center justify-center gap-4">
           <span>No problem</span>
 
-          <Button asChild>
-            <Link href="/"><ArrowBigLeft />Get Back InTouch</Link>
+          <Button asChild className="text-app-strict-text-white-500">
+            <Link
+              href="/"
+              className="font-semibold"
+            >
+              <ArrowBigLeft />
+              Get Back InTouch
+            </Link>
           </Button>
         </div>
       </div>
@@ -28,5 +36,5 @@ export default function NotFound() {
         className="z-0 bg-cover bg-center object-cover"
       />
     </div>
-  )
+  );
 }
