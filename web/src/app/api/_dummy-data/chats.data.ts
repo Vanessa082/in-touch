@@ -1,4 +1,4 @@
-import { Chat } from "@/interfaces/chat.types";
+import { type Chat, MessageViewStatus } from "@/interfaces/chat.types";
 import { ProfilePreview } from "@/interfaces/user.types";
 
 const IntouchAdmin: ProfilePreview = {
@@ -13,7 +13,10 @@ const IntouchAdmin: ProfilePreview = {
 const ChatsData: Chat[] = [
   {
     id: "chat_1",
-    latestMessage: "I need help getting started with intouch!",
+    latestMessage: {
+      textContent: "I need help getting started with intouch!",
+      status: MessageViewStatus.NOT_OPENED,
+    },
     chatName: "Bruno",
     isGroupChat: false,
     groupAdmins: [],
@@ -23,7 +26,7 @@ const ChatsData: Chat[] = [
         email: "bruno@gmail.com",
         username: "bruno",
         name: "Bruno",
-        bio: "forever you",
+        bio: "forever young",
         profilePhoto: "",
       },
       IntouchAdmin,
@@ -31,7 +34,10 @@ const ChatsData: Chat[] = [
   },
   {
     id: "chat_2",
-    latestMessage: "How've you been!",
+    latestMessage: {
+      textContent: "How've you been!",
+      status: MessageViewStatus.SEEN,
+    },
     chatName: "Maria",
     isGroupChat: false,
     groupAdmins: [],
@@ -49,7 +55,10 @@ const ChatsData: Chat[] = [
   },
   {
     id: "chat_3",
-    latestMessage: "How's it going, I need to get a verified badge!",
+    latestMessage: {
+      textContent: "How's it going, I need to get a verified badge!",
+      status: MessageViewStatus.NOT_OPENED,
+    },
     chatName: "Nfor Vini",
     isGroupChat: false,
     groupAdmins: [],

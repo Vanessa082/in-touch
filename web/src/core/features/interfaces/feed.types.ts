@@ -1,4 +1,4 @@
-import type { BaseMessage, DateType, MediaContent } from "./extras.types";
+import type { BaseMessage, DateType, MediaContent, Reactions } from "./extras.types";
 import type { ProfilePreview } from "./user.types";
 
 interface Post {
@@ -7,6 +7,7 @@ interface Post {
   user?: ProfilePreview;
   textContent: string;
   mediaContent: Array<MediaContent>;
+  reactions: Reactions;
   createdAt: DateType;
   updatedAt: DateType;
 }

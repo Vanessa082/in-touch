@@ -20,8 +20,8 @@ export default async function HeroSection() {
           Be Involved
         </div>
         <p className="max-w-[400px] text-app-text-dark-300">
-          <q>Discover your community. Share your voice. Never miss a moment.</q>{" "}
-          With InTouch, you&apos;re always part of the conversation
+          <q>Discover your community. Share your voice. Never miss a moment.</q> With
+          InTouch, you&apos;re always part of the conversation
         </p>
 
         <Button className="flex w-fit">
@@ -36,12 +36,7 @@ export default async function HeroSection() {
 
         <div className="hidden w-fit flex-row items-center justify-between gap-4 md:flex md:max-w-[35vw]">
           <div className="flex w-fit items-center justify-center gap-4">
-            <Image
-              src="./home/avatars.svg"
-              alt="images"
-              width={70}
-              height={100}
-            />
+            <Image src="./home/avatars.svg" alt="images" width={70} height={100} />
             <div className="flex flex-col">
               <span className="font-bold">000,2</span>
               <span className="text-app-dark-200">Happy users</span>

@@ -1,9 +1,9 @@
 import { ChatsData } from "../_dummy-data/chats.data";
 
 export async function GET() {
-  return new Promise((r) => {
+  return new Promise((resole) => {
     setTimeout(() => {
-      r(
+      resole(
         Response.json({
           status: 200,
           message: "chats retrieved",

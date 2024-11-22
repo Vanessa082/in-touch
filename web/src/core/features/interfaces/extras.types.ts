@@ -7,6 +7,8 @@ interface MediaContent {
   url: string;
 }
 
+type Reactions = Array<string>;
+
 interface PaginatedResponse<T> {
   count: number;
   page: number;
@@ -16,7 +18,7 @@ interface PaginatedResponse<T> {
 interface BaseMessage {
   id: string;
   textContent: string;
-  reactions: Array<string>;
+  reactions: Reactions;
   senderId: string;
   sender?: ProfilePreview; // virtual key
   isReplyOf: string | null; // id of the chat it replies
@@ -25,4 +27,4 @@ interface BaseMessage {
   updatedAt: DateType;
 }
 
-export type { DateType, MediaContent, PaginatedResponse, BaseMessage };
+export type { DateType, MediaContent, PaginatedResponse, Reactions, BaseMessage };

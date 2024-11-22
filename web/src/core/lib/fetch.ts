@@ -22,9 +22,7 @@ export function Fetcher<T>(
   };
 
   if (options?.data) {
-    (OPTIONS as unknown as { data: string }).data = JSON.stringify(
-      options.data
-    );
+    (OPTIONS as unknown as { data: string }).data = JSON.stringify(options.data);
   }
 
   return fetch(`${BASE_URL}/${url}`, OPTIONS).then((res) => res.json());

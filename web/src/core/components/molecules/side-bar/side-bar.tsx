@@ -76,11 +76,7 @@ export function SideBar() {
   const { open } = useSidebar();
 
   return (
-    <Sidebar
-      className=""
-      collapsible="icon"
-      variant={open ? "sidebar" : "floating"}
-    >
+    <Sidebar className="" collapsible="icon" variant={open ? "sidebar" : "floating"}>
       <SidebarHeader className="pt-8">
         <Link href="/" className="mx-auto w-fit text-xl sm:text-2xl">
           <TextLogo

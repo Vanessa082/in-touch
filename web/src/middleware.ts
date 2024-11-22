@@ -4,7 +4,12 @@ import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
  * See clerk docs
  * @see https://clerk.com/docs/references/nextjs/custom-signup-signin-pages#make-the-sign-up-and-sign-in-routes-public
  */
-const publicRoutes = ["/", "/sign-in(.*)", "/sign-up(.*)", "/api(.*)"];
+const publicRoutes = [
+  "/",
+  "/sign-in(.*)",
+  "/sign-up(.*)",
+  "/api(.*)",
+];
 
 const isPublicRoute = createRouteMatcher(publicRoutes);
 

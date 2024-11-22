@@ -30,10 +30,7 @@ export default function Header() {
         </SignedOut>
 
         <SignedIn>
-          <Button
-            asChild
-            className="font-semibold text-app-strict-text-white-500"
-          >
+          <Button asChild className="font-semibold text-app-strict-text-white-500">
             <Link href="/feed">Continue</Link>
           </Button>
         </SignedIn>
