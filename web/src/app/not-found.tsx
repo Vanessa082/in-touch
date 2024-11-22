@@ -17,10 +17,7 @@ export default function NotFound() {
           <span>No problem</span>
 
           <Button asChild className="text-app-strict-text-white-500">
-            <Link
-              href="/"
-              className="font-semibold"
-            >
+            <Link href="/" className="font-semibold">
               <ArrowBigLeft />
               Get Back InTouch
             </Link>
