@@ -3,8 +3,8 @@ import { ProfilePreview } from "./user.types";
 type DateType = Date | string;
 
 interface MediaContent {
-  mediaType: String;
-  url: String;
+  mediaType: string;
+  url: string;
 }
 
 interface PaginatedResponse<T> {

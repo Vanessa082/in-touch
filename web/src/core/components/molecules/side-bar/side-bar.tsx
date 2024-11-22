@@ -15,7 +15,7 @@ import {
   SidebarGroupLabel,
   SidebarHeader,
   SidebarMenu,
-  SidebarMenuAction,
+  // SidebarMenuAction,
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarMenuSub,
@@ -30,7 +30,7 @@ import {
   Home,
   Inbox,
   MessageCircleIcon,
-  MoreHorizontal,
+  // MoreHorizontal,
   Settings,
   User2Icon,
 } from "lucide-react";
@@ -59,18 +59,18 @@ const NavGroup1 = [
   },
 ];
 
-const NavGroup2 = [
-  {
-    title: "Settings",
-    icon: Settings,
-    component: () => (
-      <SidebarMenuAction>
-        <MoreHorizontal />
-        <span className="sr-only">More</span>
-      </SidebarMenuAction>
-    ),
-  },
-];
+// const NavGroup2 = [
+//   {
+//     title: "Settings",
+//     icon: Settings,
+//     component: () => (
+//       <SidebarMenuAction>
+//         <MoreHorizontal />
+//         <span className="sr-only">More</span>
+//       </SidebarMenuAction>
+//     ),
+//   },
+// ];
 
 export function SideBar() {
   const { open } = useSidebar();

@@ -4,6 +4,7 @@ interface User {
   id: string;
   email: string;
   username: string;
+  name: string; // this is not unique
   bio: string;
   profilePhoto: string;
   createdAt: DateType;
@@ -12,7 +13,7 @@ interface User {
 
 type ProfilePreview = Pick<
   User,
-  "id" | "email" | "username" | "bio" | "profilePhoto"
+  "id" | "email" | "username" | "name" | "bio" | "profilePhoto"
 >;
 
 interface UserProfile {

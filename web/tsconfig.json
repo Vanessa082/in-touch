@@ -19,6 +19,7 @@
       }
     ],
     "paths": {
+      "@/interfaces/*": ["./src/core/features/interfaces/*"],
       "@/features/*": ["./src/core/features/*"],
       "@/lib/*": ["./src/core/lib/*"],
       "@/components/*": ["./src/core/components/*"],
