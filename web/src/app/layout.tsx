@@ -43,6 +43,7 @@ export const metadata: Metadata = {
     default: appName,
   },
   description: appDescription,
+  metadataBase: new URL(process.env.FRONT_END_URL!),
   openGraph: {
     type: "website",
     siteName: appName,

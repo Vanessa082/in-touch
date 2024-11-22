@@ -1,9 +1,15 @@
 import { MainTag } from "@/components/atoms";
 
-export default function ChatPage(props) {
+interface Props {
+  params: Promise<{ id: string }>;
+}
+
+export default async function ChatPage(props: Props) {
+  const { id } = await props.params;
+
   return (
-    <MainTag>
-      Chats Page Loading chat with id: {props.id}
+    <MainTag className="w-full">
+      Chats Page Loading chat with id: {id}
       {JSON.stringify(props, null, 4)}
     </MainTag>
   );

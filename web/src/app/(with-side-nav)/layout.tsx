@@ -12,7 +12,8 @@ export default function WithSideNavLayout({
 
       <div className="w-full">
         <SidebarTrigger />
-        {children}
+
+        <div className="w-full">{children}</div>
       </div>
     </SidebarProvider>
   );
