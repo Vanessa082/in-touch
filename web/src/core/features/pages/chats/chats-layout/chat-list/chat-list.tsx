@@ -1,6 +1,8 @@
-import { Chat } from "@/interfaces/chat.types";
+import { Chat, MessageViewStatus } from "@/interfaces/chat.types";
 import { Fetcher } from "@/lib/fetch";
+import { Check, CheckCheck, Loader } from "lucide-react";
 import Link from "next/link";
+import { Avatar, AvatarFallback, AvatarImage } from "../../../../../components/ui/avatar";
 // import { Check } from "lucide-react";
 
 function ChatListSkeleton() {
@@ -24,15 +26,42 @@ function ChatListSkeleton() {
 }
 
 function ChatCard({ chat }: { chat: Chat }) {
+  const getLatestMessageStatus = (status: MessageViewStatus) => {
+    if (status === "PENDING") {
+      return <Loader className="text-app-text-dark-200" />;
+    } else if (status === "SENT") {
+      return <Check className="text-app-text-dark-200" />;
+    } else if (status === "RECEIVED") {
+      return <CheckCheck className="text-app-text-dark-200" />;
+    } else if (status === "SEEN") {
+      return <CheckCheck className="text-app-text-blue-500" />;
+    } else {
+      return "UNKNOWN";
+    }
+  };
+
   return (
-    <Link href={`/chats/${chat.id}`} className="cursor-pointer">
-      <div>
-        <span>{chat.chatName}</span>
-        <div>
-          <p>{chat.latestMessage.textContent}</p>
-          <p>{chat.latestMessage.status}</p>
+    <Link href={`/chats/${chat.id}`} className="cursor-pointer w-full max-w-[600px]">
+      <div className="flex items-center justify-between gap-3 p-4 border-b hover:bg-blue-50 cursor-pointer transition-all">
+        <div className="flex items-center gap-3">
+          <Avatar>
+            <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+            <AvatarFallback>AN</AvatarFallback>
+          </Avatar>
+
+          <div className="flex flex-col">
+            <span className="font-semibold text-app-text-dark-500">{chat.chatName}</span>
+            <span className="text-sm text-app-text-dark-300 truncate">
+              {chat.latestMessage.textContent}
+            </span>
+          </div>
         </div>
-        {/* <pre>{JSON.stringify(chat, null, 2)}</pre> */}
+
+        <div className="flex flex-col items-end">
+          <span className="text-xs text-app-dark-200"></span>
+
+          <span>{getLatestMessageStatus(chat.latestMessage.status)}</span>
+        </div>
       </div>
     </Link>
   );
@@ -43,7 +72,7 @@ async function ChatList() {
 
   return (
     <>
-      <h2 className="mb-4 font-semibold">Contacts List</h2>
+      <h2 className="mb-4 font-semibold">Inbox</h2>
 
       {chats.map((c) => (
         <ChatCard key={c.id} chat={c} />
