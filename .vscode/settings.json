@@ -1,15 +1,8 @@
 {
   "editor.formatOnSave": true,
   "prettier.configPath": "./web/.prettierrc.json",
-  "typescript.preferences.importModuleSpecifier": "relative",
   "files.insertFinalNewline": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  }
 }

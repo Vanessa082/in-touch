@@ -14,6 +14,7 @@ export function Fetcher<T>(
     method?: Methods;
     data?: Record<string, unknown>;
     headers?: HeadersInit;
+    queries?: Record<string, string>;
   }
 ): Promise<APIResponse<T>> {
   const OPTIONS = {
@@ -25,5 +26,11 @@ export function Fetcher<T>(
     (OPTIONS as unknown as { data: string }).data = JSON.stringify(options.data);
   }
 
-  return fetch(`${BASE_URL}/${url}`, OPTIONS).then((res) => res.json());
+  let reqUrl = `${BASE_URL}/${url}`;
+
+  if (options?.queries) {
+    reqUrl += `?${new URLSearchParams(options.queries).toString()}`
+  }
+
+  return fetch(reqUrl, OPTIONS).then((res) => res.json());
 }

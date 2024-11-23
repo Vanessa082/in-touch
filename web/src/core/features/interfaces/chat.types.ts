@@ -1,19 +1,22 @@
-import type { DateType, BaseMessage } from "./extras.types";
+import type { DateType, BaseMessage, MediaContent } from "./extras.types";
 import type { ProfilePreview } from "./user.types";
 
 const enum MessageViewStatus {
   PENDING = "PENDING",
   SENT = "SENT",
-  RECEIVED = "RECEIVED",
+  NOT_OPENED = "NOT_OPENED",
   SEEN = "SEEN",
 }
 
 interface Chat {
   id: string;
-  chatName: string; // will be formed in the backend where it will be the name of the sender if it's not a group chat
+  name: string; // will be formed in the backend where it will be the name of the sender if it's not a group chat
+  profileImg: MediaContent;
   latestMessage: {
     textContent: string;
     status: MessageViewStatus;
+    time: DateType;
+    unSeenCount: number | null;
   };
   isGroupChat: boolean;
   groupAdmins: Array<ProfilePreview>;

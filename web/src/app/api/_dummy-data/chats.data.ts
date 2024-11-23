@@ -1,76 +1,84 @@
-import { type Chat, MessageViewStatus } from "@/interfaces/chat.types";
-import { ProfilePreview } from "@/interfaces/user.types";
+import type { ProfilePreview } from "@/interfaces/user.types";
+import { type Chat } from "@/interfaces/chat.types";
 
-const IntouchAdmin: ProfilePreview = {
-  id: "user_1",
-  email: "intouch@gmail.com",
-  username: "intouch",
-  name: "Intouch",
-  bio: "Creator of @intouch",
-  profilePhoto: "https://github.com/shadcn.png",
+import { UsersData, IntouchAdmin } from "./users.data";
+import { MessagesData } from "./message.data";
+
+const getChatUser = (userId: (typeof UsersData)[number]["id"]) => {
+  return UsersData.find(({ id }) => id === userId) as ProfilePreview;
 };
+
+const getLastMessage = (chatId: typeof MessagesData[number]["chatId"]) => {
+  const chatMessages = MessagesData.filter(({ chatId: cId }) => cId === chatId);
+
+  const lastMessage = chatMessages.at(-1)!;
+
+  return {
+    textContent: lastMessage.textContent,
+    status: lastMessage.status.value,
+    time: lastMessage.createdAt,
+    unSeenCount: chatMessages.length,
+  }
+}
 
 const ChatsData: Chat[] = [
   {
     id: "chat_1",
-    latestMessage: {
-      textContent: "I need help getting started with intouch!",
-      status: MessageViewStatus.RECEIVED,
+    latestMessage: getLastMessage("chat_1"),
+    name: getChatUser("user_2").name,
+    profileImg: {
+      mediaType: "",
+      url: getChatUser("user_2").profileImg.url
     },
-    chatName: "Bruno",
     isGroupChat: false,
     groupAdmins: [],
     members: [
-      {
-        id: "user_2",
-        email: "bruno@gmail.com",
-        username: "bruno",
-        name: "Bruno",
-        bio: "forever young",
-        profilePhoto: "",
-      },
+      getChatUser("user_2"),
       IntouchAdmin,
     ],
   },
   {
     id: "chat_2",
-    latestMessage: {
-      textContent: "How've you been!",
-      status: MessageViewStatus.SEEN,
+    latestMessage: getLastMessage("chat_2"),
+    name: getChatUser("user_3").name,
+    profileImg: {
+      mediaType: "",
+      url: getChatUser("user_3").profileImg.url,
     },
-    chatName: "Maria",
     isGroupChat: false,
     groupAdmins: [],
     members: [
-      {
-        id: "user_3",
-        email: "maria@gmail.com",
-        username: "maria",
-        name: "Maria",
-        bio: "quen",
-        profilePhoto: "",
-      },
+      getChatUser("user_3"),
       IntouchAdmin,
     ],
   },
   {
     id: "chat_3",
-    latestMessage: {
-      textContent: "How's it going, I need to get a verified badge!",
-      status: MessageViewStatus.RECEIVED,
+    latestMessage: getLastMessage("chat_3"),
+    name: getChatUser("user_4").name,
+    profileImg: {
+      mediaType: "",
+      url: getChatUser("user_4").profileImg.url,
     },
-    chatName: "Nfor Vini",
     isGroupChat: false,
     groupAdmins: [],
     members: [
-      {
-        id: "user_4",
-        email: "nfor_vini@gmail.com",
-        username: "nfor_vini",
-        name: "Nfor Vini",
-        bio: "Real madrid 7",
-        profilePhoto: "",
-      },
+      getChatUser("user_4"),
+      IntouchAdmin,
+    ],
+  },
+  {
+    id: "chat_4",
+    latestMessage: getLastMessage("chat_4"),
+    name: getChatUser("user_5").name,
+    profileImg: {
+      mediaType: "",
+      url: getChatUser("user_5").profileImg.url,
+    },
+    isGroupChat: false,
+    groupAdmins: [],
+    members: [
+      getChatUser("user_5"),
       IntouchAdmin,
     ],
   },

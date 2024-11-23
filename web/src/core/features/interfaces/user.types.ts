@@ -1,4 +1,4 @@
-import type { DateType, PaginatedResponse } from "./extras.types";
+import type { DateType, MediaContent, PaginatedResponse } from "./extras.types";
 
 interface User {
   id: string;
@@ -6,14 +6,14 @@ interface User {
   username: string;
   name: string; // this is not unique
   bio: string;
-  profilePhoto: string;
+  profileImg: MediaContent;
   createdAt: DateType;
   updated: DateType;
 }
 
 type ProfilePreview = Pick<
   User,
-  "id" | "email" | "username" | "name" | "bio" | "profilePhoto"
+  "id" | "email" | "username" | "name" | "bio" | "profileImg"
 >;
 
 interface UserProfile {
