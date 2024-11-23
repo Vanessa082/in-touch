@@ -4,7 +4,7 @@ import type { ProfilePreview } from "./user.types";
 const enum MessageViewStatus {
   PENDING = "PENDING",
   SENT = "SENT",
-  NOT_OPENED = "NOT_OPENED",
+  RECEIVED = "RECEIVED",
   SEEN = "SEEN",
 }
 

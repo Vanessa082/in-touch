@@ -15,7 +15,7 @@ const ChatsData: Chat[] = [
     id: "chat_1",
     latestMessage: {
       textContent: "I need help getting started with intouch!",
-      status: MessageViewStatus.NOT_OPENED,
+      status: MessageViewStatus.RECEIVED,
     },
     chatName: "Bruno",
     isGroupChat: false,
@@ -57,7 +57,7 @@ const ChatsData: Chat[] = [
     id: "chat_3",
     latestMessage: {
       textContent: "How's it going, I need to get a verified badge!",
-      status: MessageViewStatus.NOT_OPENED,
+      status: MessageViewStatus.RECEIVED,
     },
     chatName: "Nfor Vini",
     isGroupChat: false,
