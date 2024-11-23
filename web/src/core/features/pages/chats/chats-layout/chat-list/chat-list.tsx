@@ -1,5 +1,7 @@
 import { Chat } from "@/interfaces/chat.types";
 import { Fetcher } from "@/lib/fetch";
+import Link from "next/link";
+// import { Check } from "lucide-react";
 
 function ChatListSkeleton() {
   return (
@@ -23,9 +25,16 @@ function ChatListSkeleton() {
 
 function ChatCard({ chat }: { chat: Chat }) {
   return (
-    <div>
-      <pre>{JSON.stringify(chat, null, 2)}</pre>
-    </div>
+    <Link href={`/chats/${chat.id}`} className="cursor-pointer">
+      <div>
+        <span>{chat.chatName}</span>
+        <div>
+          <p>{chat.latestMessage.textContent}</p>
+          <p>{chat.latestMessage.status}</p>
+        </div>
+        {/* <pre>{JSON.stringify(chat, null, 2)}</pre> */}
+      </div>
+    </Link>
   );
 }
 
