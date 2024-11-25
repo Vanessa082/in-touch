@@ -34,7 +34,7 @@ const UsersData = [
     id: "user_4",
     email: "nfor_vini@gmail.com",
     username: "nfor_vini",
-    name: "Nfor Vini",
+    name: "Nfor Vini JR",
     bio: "Real madrid 7",
     profileImg: "",
   },

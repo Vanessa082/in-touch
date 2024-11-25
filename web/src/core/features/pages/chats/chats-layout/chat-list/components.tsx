@@ -1,7 +1,7 @@
 import { Chat, MessageViewStatus } from "@/interfaces/chat.types";
 import { Check, CheckCheck } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { getProfileURLFromInitials } from "@/lib/utils";
+import { getInitials, getProfileURLFromInitials } from "@/lib/utils";
 
 import Link from "next/link";
 
@@ -50,8 +50,7 @@ function ChatCard({ chat }: { chat: Chat; }) {
           <Avatar>
             <AvatarImage src={getPhoto()} alt="@shadcn" />
             <AvatarFallback>
-
-              {chat.name}
+              {getInitials(chat.name)}
             </AvatarFallback>
           </Avatar>
 
