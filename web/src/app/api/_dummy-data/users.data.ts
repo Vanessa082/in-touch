@@ -46,6 +46,17 @@ const UsersData = [
     bio: "Lead front end developer at GodmodeHq",
     profileImg: "",
   },
+  {
+    id: "user_6",
+    email: "shad@gmail.com",
+    username: "shad",
+    name: "Shad",
+    bio: "Creator of @shadcnui",
+    profileImg: {
+      mediaType: "",
+      url: "https://github.com/shadcn.png",
+    },
+  }
 ] as const;
 
 export { IntouchAdmin, UsersData };

@@ -82,6 +82,21 @@ const ChatsData: Chat[] = [
       IntouchAdmin,
     ],
   },
+  {
+    id: "chat_5",
+    latestMessage: getLastMessage("chat_4"),
+    name: getChatUser("user_6").name,
+    profileImg: {
+      mediaType: "",
+      url: getChatUser("user_6").profileImg.url,
+    },
+    isGroupChat: false,
+    groupAdmins: [],
+    members: [
+      getChatUser("user_6"),
+      IntouchAdmin,
+    ],
+  },
 ];
 
 export { ChatsData };

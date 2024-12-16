@@ -143,6 +143,23 @@ const MessagesData = [
     createdAt: "",
     updatedAt: "",
   },
+
+  // chat_5
+  {
+    id: "msg_5",
+    chatId: "chat_5",
+    textContent: "Hello InTouch Team! It's your favorite UI library. Up for hire?",
+    status: {
+      value: MessageViewStatus.NOT_OPENED,
+      seenAt: new Date().toISOString(),
+    },
+    reactions: ["💙"],
+    senderId: "user_6",
+    isReplyOf: null,
+    mediaContent: [],
+    createdAt: "",
+    updatedAt: "",
+  },
 ] as const;
 
 export { MessagesData };
