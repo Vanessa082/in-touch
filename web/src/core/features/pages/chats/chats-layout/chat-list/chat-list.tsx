@@ -9,7 +9,7 @@ async function ChatList() {
     <>
       <h2 className="mb-4 font-semibold">Inbox</h2>
 
-      {chats.map((c) => (
+      {chats?.map((c) => (
         <ChatCard key={c.id} chat={c} />
       ))}
     </>
