@@ -32,6 +32,8 @@ export default async function ChatPage(props: Props) {
     chat: Chat;
   }>(`/api/chats/${id}`);
 
+  console.log(messages, 'yo')
+
   const getPhoto = () => {
     return chat.profileImg.url || getProfileURLFromInitials(chat.name);
   }
@@ -51,10 +53,7 @@ export default async function ChatPage(props: Props) {
           <p className="">{ }</p>
         </div>
       </div>
-      {/* 
-      Chats Page Loading messages with id: {id}
-      {JSON.stringify(props, null, 4)}
-      <pre>{JSON.stringify(messages, null, 2)}</pre> */}
+
     </MainTag>
   );
 }
